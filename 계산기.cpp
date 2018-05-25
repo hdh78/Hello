@@ -18,5 +18,7 @@ int main()
 	case '*': cout << a * b << '\n';
 		break;
 	case '/': cout << a / b << '\n';
+		break;
+	case '%': cout << a % b << '\n';
 	};
 }
