@@ -10,15 +10,23 @@ int main()
 	cin >> b;
 	cout << "기호:";
 	cin >> c;
-	switch (c) {
-	case '+': cout << a + b << '\n';
-		break;
-	case '-': cout << a - b << '\n';
-		break;
-	case '*': cout << a * b << '\n';
-		break;
-	case '/': cout << a / b << '\n';
-		break;
-	case '%': cout << a % b << '\n';
-	};
+	try{
+		if ((b == 0) && (c == '/'))
+			throw b;
+		switch (c) {
+		case '+': cout << a + b << '\n';
+			break;
+		case '-': cout << a - b << '\n';
+			break;
+		case '*': cout << a * b << '\n';
+			break;
+		case '/': cout << a / b << '\n';
+			break;
+		case '%': cout << a % b << '\n';
+		}
+	}
+	catch (...)
+	{
+		cout << b <<"으로 나눌 수 없습니다." << '\n';
+	}
 }
